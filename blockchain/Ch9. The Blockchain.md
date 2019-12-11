@@ -67,6 +67,8 @@
 
 - The merkel tree is a binary tree, it needs an even number of leaf nodes
 
+  
+
   ![image-20191209001015906](/Users/yuri/Library/Application Support/typora-user-images/image-20191209001015906.png)
 
 
