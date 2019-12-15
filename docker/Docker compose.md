@@ -70,7 +70,7 @@ docker-compose down
 
 한꺼번에 실행하려면 **docker-compose up**
 
-한꺼번에 내리기 위해서는 **docker-compose down*8
+한꺼번에 내리기 위해서는 **docker-compose down**
 
 
 
