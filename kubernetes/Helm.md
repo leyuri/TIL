@@ -52,6 +52,10 @@ ubuntu@ubuntu:~$ curl https://raw.githubusercontent.com/helm/helm/master/scripts
 ubuntu@ubuntu:~$ chmod 700 get_helm.sh
 ```
 
+**chmod 700 \*   //**현재 위치의 모든 파일과 폴더 권한 수정
+
+
+
 ```
 ubuntu@ubuntu:~$ ./get_helm.sh
 Downloading https://get.helm.sh/helm-v2.16.1-linux-amd64.tar.gz
