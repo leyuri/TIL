@@ -31,8 +31,8 @@ virtualenv 20.0.10 from /usr/local/lib/python3.7/site-packages/virtualenv/__init
 
 
 ## HW사양
+<img width="577" alt="Screen Shot 2020-03-18 at 2 32 11 AM" src="https://user-images.githubusercontent.com/33794732/76884212-acc7b480-68c0-11ea-9bab-2de8d58f22fa.png">
 
-![Screen Shot 2020-03-18 at 1.58.27 AM](/Users/yuri/Library/Application Support/typora-user-images/Screen Shot 2020-03-18 at 1.58.27 AM.png)
 
 
 
@@ -65,14 +65,13 @@ yuri@apples-MacBook-Pro ~ % source ./venv/bin/activate
 (venv) yuri@apples-MacBook-Pro ~ % jupyter notebook
 ```
 
-![Screen Shot 2020-03-13 at 12.24.03 AM](/Users/yuri/Desktop/Screen Shot 2020-03-13 at 12.24.03 AM.png)
+
+<img width="583" alt="Screen Shot 2020-03-13 at 12 24 03 AM" src="https://user-images.githubusercontent.com/33794732/76884520-295a9300-68c1-11ea-8b83-749fc36fd1ae.png">
+
 
 - Printout2. python shell을 통하여 실행 결과 확인
 
-![Screen Shot 2020-03-13 at 12.13.54 AM](/Users/yuri/Desktop/Screen Shot 2020-03-13 at 12.13.54 AM.png)
-
-
-
+<img width="444" alt="Screen Shot 2020-03-13 at 12 13 54 AM" src="https://user-images.githubusercontent.com/33794732/76884313-dda7e980-68c0-11ea-849c-db13b72597e6.png">
 
 
 이 과정에서 에러가 발생해 구글링을 해봤다..ㅜ
@@ -85,8 +84,8 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 ```
 
-그렇구나...🤔
-
+그렇구나...🤔 응급처치 빠르게 해줌...
+<img width="1086" alt="Screen Shot 2020-03-13 at 12 15 50 AM" src="https://user-images.githubusercontent.com/33794732/76884323-e0a2da00-68c0-11ea-9f3c-3e6d1e6aeee3.png">
 
 
 ### 간단 명령어 정리
