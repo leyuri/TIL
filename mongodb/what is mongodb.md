@@ -2,7 +2,7 @@ https://dreamholic.tistory.com/98
 
 ## DataBase
 
-한 조직의 여러 응용 시스템들이 공용하기 위해  integrated, stored operational data  ㄴㄷㅅ
+한 조직의 여러 응용 시스템들이 공용하기 위해  integrated, stored operational data
 
 
 
