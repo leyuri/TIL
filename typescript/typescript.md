@@ -109,3 +109,21 @@ ts 는 클래스가 어떤 속성들을 가져야 하는지 선언해야 한다.
 몇가지 속성을 보호할 수 있게 해준다.
 
 변경을 원하는지의 여부에 따라서!
+
+
+
+
+
+#### yarn add crypto-js
+
+##### yarn add typescript 하고나서 yarn start!
+
+maybe tsc-watch에 버그 있음!
+
+
+
+```
+yarn add typescript
+yarn start
+```
+

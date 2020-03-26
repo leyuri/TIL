@@ -1,3 +1,5 @@
+https://dreamholic.tistory.com/98
+
 ## DataBase
 
 한 조직의 여러 응용 시스템들이 공용하기 위해  integrated, stored operational data  ㄴㄷㅅ
@@ -47,4 +49,13 @@ NodeJS용 MongoDB ODM
 | GET    | /api/video/id/edit | edit  | edit from for a spcific video |
 | PUT    | /api/video/Lid     |       | Update a spcific video        |
 | DELETE | /api/video/:id     |       | Delete a sspcific video       |
+
+
+
+## NoSQL DB Hosting 서비스들
+
+- mongodb에서 자체적으로 제공하는 Atlas 서비스
+- aws의 dynamoDB
+- google cloud의 datastore
+- mlab
 
