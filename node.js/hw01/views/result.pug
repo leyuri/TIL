@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Comment
+  p What is it?
+  .container
+    .row
+      .col
+    .row
+      .col
+
+        img.img-fluid(src='images/yuri.jpeg' alt='Responsive image')
+
+      .col
+        table.table.table-bordered
+          thead
+            tr
+              th(scope='col') 이름
+              th(scope='col') 이유리
+          tbody
+            tr
+              th(scope='row') 학번
+              td 60161621
+        P 내가 하고 싶은 말은 🥺
+        h1.p.font-italic #{description} 

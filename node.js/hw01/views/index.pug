@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+
+
+
+  .container
+    .row
+      .col
+    .row
+      .col
+
+        img.img-fluid(src='images/yuri.jpeg' alt='Responsive image')
+
+      .col
+        table.table.table-bordered
+          thead
+            tr
+              th(scope='col') 이름
+              th(scope='col') 이유리
+          tbody
+            tr
+              th(scope='row') 학번
+              td 60161621
+        P 하고 싶은 말을 남겨주세요
+
+        form(action='/submit', method='post')
+          .form-group
+            label(for='inputComment') Comment :
+            input#inputComment.form-control(name='description' placeholder='')
+          button.btn.btn-warning(type='submit') Submit
