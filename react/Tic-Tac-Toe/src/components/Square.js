@@ -1,24 +1,25 @@
 import React, { Component }from 'react';
 
-class Square extends Component {
 
-    constructor(props) {
-        super(props);
+function Square(props) {
+    return (
+        <button className='square' 
+        onClick={ () => {
+            props.onClick();
+        }}
+        >{props.value}</button>
+        );
 
-        this.state = {
-            value: null
-        };
-    }
+}
+
+
+
+    // onClick() {
+    //     this.setState({
+    //         value: (this.state.value === "X" ? "O" : "X")
+    //     });
+    // }
 
     //this.props = {value: "1"}
-    render() {  //JSX
-        const { value } = this.state;
-        return (
-        <button className='square' 
-        onClick={ () => {this.setState({value: 'X'})}}
-        >{value}</button>
-        );
-    }
-}
 
 export default Square;
