@@ -1,5 +1,7 @@
 import React, { Component }from 'react';
 import Board from './Board';
+import { Button, PageHeader, Layout, Breadcrumb, Row, Col} from 'antd';
+const { Content, Footer } = Layout;
 
 class Game extends Component {
 
@@ -55,24 +57,24 @@ class Game extends Component {
             step: step + 1,
         })
     }
-
     goto(idx) {
         this.setState({
             step: idx,
             
         });
     }
-
     getMoves() {
         //map: 안에서 히스토리 한줄한줄을 출력할 것이기 대문에
         return this.state.history.map((step, idx) => {
-            const desc = idx ? `Go to move #${idx}` : "Go to game start";
+            const desc = idx ? `Go to move #${idx}` : "Go to game🤗";
             return (
                 //key가 있어야 함
+          
                 <li key={idx}>
-                <button onClick= {
+                <Button type="dashed" onClick= {
                     () => {this.goto(idx);}
-                }>{desc}</button>
+                }>{desc}</Button>
+                <br></br>
                 </li>
             );
         })
@@ -92,34 +94,62 @@ class Game extends Component {
         }
 
         return(
-            <div className="game">
-                <div className="game-board">
-                    <Board 
-                    squares={squares} 
-                    onClick={(i) => this.handleClick(i)}/>
-                </div>
-                <div className="game-info">
 
-                    <div> 
-                        {status}
-                    </div>
-                    <ol>
-                        {this.getMoves()}
-                    </ol>
-                    {
-                        (this.state.step >= 1) && (<button onClick={() => {
-                            this.setState({
-                                step: this.state.step -1,
-                                history: this.state.history.slice(0, this.state.step)
-                            });
-                        }}>Undo</button>)
-                    }
 
-                </div>
+
+        <div className="game">    
+
+        <Layout className="layout">
+            <div className="logo" />
+                <PageHeader 
+                className="site-page-header"
+                title=" Game : Tic-Tac-Toe 🎮"
+                />
+            <Content style={{ padding: '0 50px' }}>
+            <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb.Item>Home</Breadcrumb.Item>
+                <Breadcrumb.Item>List</Breadcrumb.Item>
+                <Breadcrumb.Item>Game</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="site-layout-content">
+
+            <div className="game-info">
+            <div> 
+                {status}
+            </div>
+            </div>
+            <br></br>
+            <Row>
+            <Col span={12}>
+            <div className="game-board">
+            <Board 
+            squares={squares} 
+            onClick={(i) => this.handleClick(i)}/>
             </div>
 
+            </Col>
 
-
+            <Col span={12}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {
+            (this.state.step >= 1) && (<Button type="primary" onClick={() => {
+                this.setState({
+                    step: this.state.step -1,
+                    history: this.state.history.slice(0, this.state.step)
+                });
+            }}>Undo</Button>)
+            }
+            <br></br><br></br>
+            <ol>
+            {this.getMoves()}
+            </ol>
+            </Col>
+            </Row>
+            </div>
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>©2020 Created by yuri lee</Footer>
+        </Layout>
+        </div>             
         );
     }
 }
