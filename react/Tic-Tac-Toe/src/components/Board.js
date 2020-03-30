@@ -6,7 +6,7 @@ class Board extends Component {
 
     renderRow(rowNum) {
         return (
-            <div>
+            <div className= 'row'>
                 <Square value={rowNum * 3 + 0 }/>
                 <Square value={rowNum * 3 + 1 }/>
                 <Square value={rowNum * 3 + 2 }/>       

@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+button:focus {outline:0;}
+
 .square {
   color: white;
   width: 100px;
@@ -23,6 +25,11 @@ code {
 
 .status {
   margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 /* .game {
