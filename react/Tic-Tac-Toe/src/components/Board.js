@@ -7,15 +7,23 @@ class Board extends Component {
         super(props);
 
         this.state = {
-            squares: Array(9).fill(null)
-        }
+            squares: Array(9).fill(null),
+            xIsNext: true
+        };
     }
 
-    handleClick(no) {
-        const arr = this.state.squares.slice();
-        arr[no] = "X";
+    handleClick(i) {
+        const { squares, xIsNext } = this.state;
+        const arr = squares.slice();
+        if( arr[i]){
+            return;
+            //이미 수를 놓으면 아무것도 할 수 없도록
+        }
+
+        arr[i] = xIsNext ? "X" : "O";
         this.setState({
-            squares: arr
+            squares: arr,
+            xIsNext: !xIsNext
         })
     }
 
@@ -42,7 +50,7 @@ class Board extends Component {
 
 
     render() {
-        const status = "Next player: X";
+        const status = `Next player: ${this.state.xIsNext? 'X':'O'}`;
 
         return (
             <div>
