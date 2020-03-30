@@ -1,14 +1,14 @@
 import React, { Component }from 'react';
 
 
-function Square(props) {
+function Square({value, onClick}) {
     return (
-        <button className='square' 
-        onClick={ () => {
-            props.onClick();
-        }}
-        >{props.value}</button>
+        <button 
+        className='square' 
+        onClick={onClick}
+        >{value}</button>
         );
+    
 
 }
 
