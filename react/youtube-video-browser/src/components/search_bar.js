@@ -17,7 +17,7 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="input-group mb-3">
-            <input type="text" className="form-control" 
+            <input type="text" className="form-control shadow-none" 
             placeholder="Search" 
             aria-label="Search" 
             aria-describedby="button-addon2" value={this.state.term}
