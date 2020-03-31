@@ -17,14 +17,14 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      term: '명지대',
+      term: '강동원',
       videos: [],
       selectedVideo: null
     }
   }
 
   componentDidMount() {
-    this.search();
+    this.search(this.state.term);
   }
 
   search(term){
