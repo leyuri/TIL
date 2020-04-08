@@ -10,8 +10,9 @@ class SearchBar extends Component {
         }
     }
 
-    change(value) {
-        this.setState({term: value});
+    change(term) {
+        this.setState({term: term});
+        // this.setState({term}); 도 같음
     }
 
     render() {
