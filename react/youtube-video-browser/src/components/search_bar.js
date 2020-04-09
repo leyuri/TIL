@@ -1,17 +1,5 @@
 import React, { Component }from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import InputBase from '@material-ui/core/InputBase';
-// import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-// import InputBase from '@material-ui/core/InputBase';
-import { fade } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+import { ButtonToolbar, Button, Card, Navbar, NavDropdown, Nav, Form, FormControl, Container} from 'react-bootstrap';
 
 class SearchBar extends Component {
 
@@ -30,50 +18,41 @@ class SearchBar extends Component {
     render() {
         return (
 
+          <div>
+            <Navbar bg="light" expand="lg" >
+              <Navbar.Brand href="#home">youtube</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                  <Nav.Link href="#link">Recommended Video</Nav.Link>
+                  <NavDropdown title="My List" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Music</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">My Love</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Travel</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">Like</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">DisLike</NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+                <Form inline>
+                  <FormControl type="text" placeholder="Search" className="mr-sm-2" 
+                    classes
+                    inputProps={{ 'aria-label': 'search' }}
+                    value={this.state.term}
+                    onChange={(event) => {
+                        this.change(event.target.value);
+                    }}/>
+                  <Button variant="outline-success"     
+                    onClick={() => {
+                        this.props.onChange(this.state.term);
+                    }}>Search</Button>
+                </Form>
+              </Navbar.Collapse>
+            </Navbar>
 
-            <div className ="nav">
-            <AppBar position="static" color="secondary">
-              <Toolbar>
-                <IconButton
-                  edge="start"
-                  className
-                  color="inherit"
-                  aria-label="open drawer"
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Typography className variant="h6" noWrap>
-                   YOUTUBE
-                </Typography>
-                <div className="search">
-
-                <InputBase
-                variant="outlined"
-                placeholder="Search…"
-                classes
-                inputProps={{ 'aria-label': 'search' }}
-                value={this.state.term}
-                onChange={(event) => {
-                    this.change(event.target.value);
-                }}
-                
-                />
-                </div>
-
-                
-                <div className>
-                <SearchIcon 
-                variant="outlined" color="inherit" 
-                onClick={() => {
-                    this.props.onChange(this.state.term);
-                }}> 
-                    
-                </SearchIcon>
-                </div>
-
-              </Toolbar>
-            </AppBar>
           </div>
+ 
 
 
 
