@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.search {
+  position: 'relative';
+  color: 'white';
+  margin-left: 18rem;
+  /* width: 1rem; */
+
+}
+/* 
+.nav {
+  color: #b7c223;
+  background-color: #b7c223;
+} */
+

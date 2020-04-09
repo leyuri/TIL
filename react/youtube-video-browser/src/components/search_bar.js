@@ -1,5 +1,17 @@
 import React, { Component }from 'react';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import InputBase from '@material-ui/core/InputBase';
+// import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+// import InputBase from '@material-ui/core/InputBase';
+import { fade } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
 
 class SearchBar extends Component {
 
@@ -17,22 +29,54 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="input-group mb-3">
-            <input type="text" className="form-control shadow-none" 
-            placeholder="Search" 
-            aria-label="Search" 
-            aria-describedby="button-addon2" value={this.state.term}
-            onChange={(event) => {
-                this.change(event.target.value);
-            }}/>
-            <div className="input-group-append">
-              <button className="btn btn-info" type="button" 
-              onClick={() => {
-                  this.props.onChange(this.state.term);
-              }}
-              id="button-addon2">Search</button>
-            </div>
-            </div>
+
+
+            <div className ="nav">
+            <AppBar position="static" color="secondary">
+              <Toolbar>
+                <IconButton
+                  edge="start"
+                  className
+                  color="inherit"
+                  aria-label="open drawer"
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography className variant="h6" noWrap>
+                   YOUTUBE
+                </Typography>
+                <div className="search">
+
+                <InputBase
+                variant="outlined"
+                placeholder="Search…"
+                classes
+                inputProps={{ 'aria-label': 'search' }}
+                value={this.state.term}
+                onChange={(event) => {
+                    this.change(event.target.value);
+                }}
+                
+                />
+                </div>
+
+                
+                <div className>
+                <SearchIcon 
+                variant="outlined" color="inherit" 
+                onClick={() => {
+                    this.props.onChange(this.state.term);
+                }}> 
+                    
+                </SearchIcon>
+                </div>
+
+              </Toolbar>
+            </AppBar>
+          </div>
+
+
+
         );
     }
 }
@@ -40,3 +84,5 @@ class SearchBar extends Component {
 
 
 export default SearchBar;
+
+

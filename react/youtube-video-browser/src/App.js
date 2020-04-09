@@ -2,22 +2,29 @@ import React from 'react';
 import './App.css';
 import * as youtubesearch from "youtube-search";
 import SearchBar from './components/search_bar';
-import VideoItem from './components/video_item';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+// import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 
 // AIzaSyBa4oPbrdMSLkzpHVtKQdbtB3eJitVUJZA
 
 const GOOGLE_KEY = "AIzaSyBa4oPbrdMSLkzpHVtKQdbtB3eJitVUJZA"
 
+
 class App extends React.Component {
+
   
+
   constructor(props) {
     super(props);
 
     this.state = {
-      term: '강동원',
+      term: '전지현',
       videos: [],
       selectedVideo: null
     }
@@ -40,30 +47,36 @@ class App extends React.Component {
     }); 
   }
 
+  
+
   render() {
 
+
     return (
-      <div className="App container mt-3">
-        <SearchBar term={this.state.term} onChange={(term) => {
-          this.search(term);
-        }}/>
-        <div className="row">
-          <div className="col-8">
+
+
+      <div>
+
+      <SearchBar term={this.state.term} onChange={(term) => {this.search(term);}}/>
+        <Grid container spacing={0}>
+        <Grid item xs={8}>
           <VideoDetail video={this.state.selectedVideo}/>
-          </div>
-          <div className="col-4">
+          </Grid>
+          <Grid item xs={4}>
             <VideoList videos={this.state.videos}
               onItemSelect={(video) => {
                 this.setState({selectedVideo: video});
               }}
             />
   
-          </div>
-        </div>
+        </Grid> 
   
-  
-  
-      </div>
+        </Grid>
+    </div>
+
+
+
+
     );
 
   }
