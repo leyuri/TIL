@@ -4,7 +4,9 @@
 
 ##### rstudio를 이용하여 csv파일을 불러오던 도중 발생한 에러이다.
 
-![Screen Shot 2020-04-14 at 7.17.14 PM](/Users/yuri/Library/Application Support/typora-user-images/Screen Shot 2020-04-14 at 7.17.14 PM.png)
+
+
+<img width="792" alt="Screen Shot 2020-04-14 at 7 26 23 PM" src="https://user-images.githubusercontent.com/33794732/79214767-ee2e8e00-7e85-11ea-8bdc-07dae130f2ca.png">
 
 - R폴더 안에 data 폴더를 생성하였고, 
 
