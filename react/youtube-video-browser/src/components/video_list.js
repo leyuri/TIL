@@ -7,22 +7,33 @@ function VideoList({ videos, onItemSelect }) {
 
     return(
 
-
+        
         <ListGroup>
+        
+        다음 동영상
+        <br></br><br></br>
+        <div className="videoList">
         <ListGroup.Item>
+        <div></div>
+        {videos.map(item => (
 
             
-        <div className="videoList">
-        {
-            videos.map(item => (
-                
-            <VideoItem key={item.id} video={item} onItemSelect={onItemSelect}/>))
+        
+            <VideoItem key={item.id} 
+            video={item} 
+            onItemSelect={onItemSelect}/>))
         }
+        </ListGroup.Item>
         </div>
 
 
-        </ListGroup.Item>
+    
         </ListGroup>
+        
+
+
+
+       
  
         
 

@@ -60,3 +60,8 @@
 .mr-sm-2 {
   width: max-content;
 }
+
+.mb-2 {
+  padding-top: 0.4rem;
+  font-size: 1.1rem;
+}
