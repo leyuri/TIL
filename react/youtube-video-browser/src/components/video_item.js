@@ -1,7 +1,6 @@
 import React from 'react';
 
 function VideoItem({video, onItemSelect}) {
-
     return(
         <div className="video-item mb-1" onClick={() => {
             onItemSelect(video);

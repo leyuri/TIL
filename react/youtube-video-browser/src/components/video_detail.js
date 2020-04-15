@@ -1,9 +1,6 @@
 import React from 'react'
-import VideoList from './video_list';
-import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
@@ -23,8 +20,6 @@ export default function VideoDetail({video}) {
         src={`https://www.youtube.com/embed/${video.id}`}
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
         allowFullScreen />
-
-
         </div>
         <div>
         <Card>
