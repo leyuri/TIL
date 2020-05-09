@@ -1,5 +1,3 @@
-<div style="text-align: right">데이터테크놀로지학과 60161621 이유리<div/>
-
 ## NeuralNetwork using mnist data
 
 ##### mnist01.py
